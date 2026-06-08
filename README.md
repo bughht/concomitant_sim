@@ -1,9 +1,9 @@
-# concomitant_sim
+# MRI Concomitant Field Simulation Tool
 
 [![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](LICENSE)
 
-**`concomitant_sim`** is a fast, backend-agnostic Python package for simulating the phase accumulation caused by concomitant (Maxwell) fields in Magnetic Resonance Imaging (MRI).
+**`concomitant_sim`** is a fast, backend-agnostic Python package for simulating the phase accumulation caused by concomitant fields (Maxwell Terms) in MRI.
 
 It enables high-performance computations on both CPU and GPU by natively supporting NumPy, PyTorch, and CuPy arrays. The library uses an intelligent dispatching mechanism to adapt array operations to your inputs seamlessly, making it an ideal choice for regular simulation pipelines as well as differentiable deep learning MRI models.
 
