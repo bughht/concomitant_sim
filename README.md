@@ -5,14 +5,17 @@
 
 **`concomitant_sim`** is a fast, backend-agnostic Python package for simulating the phase accumulation caused by concomitant fields (Maxwell Terms) in MRI.
 
-It enables high-performance computations on both CPU and GPU by natively supporting NumPy, PyTorch, and CuPy arrays. The library uses an intelligent dispatching mechanism to adapt array operations to your inputs seamlessly, making it an ideal choice for regular simulation pipelines as well as differentiable deep learning MRI models.
+It enables high-performance computations on both CPU and GPU by natively supporting NumPy array, PyTorch tensor, and CuPy arrays. The library uses an intelligent dispatching mechanism to adapt array operations to your inputs seamlessly, making it an ideal choice for regular simulation pipelines as well as differentiable deep learning MRI models.
 
 ## Theoretical Modeling
-The phase accumulation $\Phi_c$ caused by concomitant fields is modeled by integrating the magnetic field variation $\Delta B_c$ over time $t$. Following the standard framework established by Bernstein et al. (1998), for a system with primary linear gradients, the concomitant field $B_c$ is approximated by second-order spatial terms:
+The phase accumulation $\Phi_c$ caused by concomitant fields is modeled by integrating the magnetic field variation $\Delta B_c$ over time. Following the standard framework established by Bernstein et al. (1998), for a system with primary linear gradients, the concomitant field $B_c$ is approximated by second-order spatial terms:
 
 The phase $\Phi_c$ at a position $\mathbf{r} = (x, y, z)$ is given by the time integral:
+
 $$\Phi_c(\mathbf{r}, TE) = \gamma \int_0^{TE} \Delta B_c(\mathbf{r}, t) dt$$
+
 Where $\Delta B_c$ is determined by the gradient waveforms:
+
 $$\Delta B_c(x, y, z, t)  \approx \frac{1}{2B_0} \left[\left(G_x^2+G_y^2\right)z^2 + G_z^2\frac{x^2+y^2}{4} - G_xG_zxz - G_yG_zyz \right] $$
 
 ---
@@ -57,7 +60,8 @@ For a complete walkthrough of the package, including how to use it with differen
 
 ---
 
-## Authors
+## Author
+
 - **Haotian Hong** - [hhong6@mgh.harvard.edu](mailto:hhong6@mgh.harvard.edu)
 
 ## References
